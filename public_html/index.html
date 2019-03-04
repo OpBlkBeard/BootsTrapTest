@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HomePage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: #212121">
+    <nav class="navbar navbar-dark navbar-expand-sm sticky-top" style="background-color: #8230b2; color:whitesmoke">
+
+        <a class="navbar-brand" href="#"><img src="img/1024.png" style="height: 60px; width: 60px; text-align: center"/></a>
+        <h3 class="display-6" style="color: whitesmoke;">Op.BlkBeard</h3>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar" style="margin-left: 30px">
+        <ul class="navbar-nav">
+            <li class="nav-item active"> 
+                <a class="nav-link" style="color:#db7b0d;"><b>HomePage</b></a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ammo.html">Ammo table</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.escapefromtarkov.com/">Escape From Tarkov</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://en.wikipedia.org/wiki/Mosin%E2%80%93Nagant">Mosin-Nagant</a>
+          </li>
+          
+          <li class="nav-item">
+              <a class="nav-link" href="bootstrap_typography.html">Typography tests</a>
+          </li>
+          
+        </ul>
+          
+      </div>
+
+    </nav>
+    
+        <div class="col rounded center-block" style=" display:block ;background-color: whitesmoke; width: 80%; margin-left:auto; margin-right: auto; margin-top: 50px;" >
+            <canvas id="myChart"></canvas>
+        </div>
+
+    <script>
+  //radar
+  var ctxR = document.getElementById("myChart").getContext('2d');
+  var myRadarChart = new Chart(ctxR, {
+    type: 'radar',
+    data: {
+      labels: [ "Walking", "Sleeping", "Designing", "Coding", "Gaming", "Escape from Tarkov"],
+      datasets: [{
+          label: "Rick",
+          data: [40, 70, 70, 90, 80, 100],
+          backgroundColor: [
+            'rgba(195, 0, 255, .2)',
+          ],
+          borderColor: [
+            'rgba(134, 0, 175, .7)',
+          ],
+          borderWidth: 2
+        },
+        {
+         label: "Pepega",
+         data: [48, 40, 19, 96, 27, 100],
+         backgroundColor:['rgba(252, 136,20,.2)'],
+         borderColor: ['rgba(216, 115, 15, .7)'],
+         borderWidth: 2
+        }
+      ]
+    },
+    options: {
+      responsive: true
+    }
+  });
+
+</script>
+
+</body>
+
+</html>
